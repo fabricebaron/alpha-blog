@@ -12,6 +12,39 @@ $navbar-default-bg: #0B08C7;
 	font-weight: bold;
 }
 
+#logo1 {
+	float: left;
+	font-size: 1em;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+#logo2 {
+	float: left;
+	font-size: 1em;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
 .center {
 	text-align: center;
+}
+
+.jumbotron {
+	background-image: asset-url('lorking1.jpg');
+	backgroud-size: cover;
+	height: 449px;
+	width: 844px;
+}
+
+.jumbotron h1 {
+	color: white;
+}
+
+.jumbotron p {
+	color: white;
 }
