@@ -35,16 +35,42 @@ $navbar-default-bg: #0B08C7;
 }
 
 .jumbotron {
-	background-image: asset-url('lorking1.jpg');
-	backgroud-size: cover;
-	height: 449px;
-	width: 844px;
+	background-image: asset-url('sport5.jpg');
+	backgroud-size: cover; 
+	height: 495px;
+	width: 1663px;
+	
 }
 
 .jumbotron h1 {
-	color: white;
+	color: blue;
 }
 
 .jumbotron p {
-	color: white;
+	color: blue;
+}
+
+footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid #bfbfbf;
+	coler: #333333;
+
+}
+
+footer small {
+	float: left;
+
+}
+
+footer ul {
+	float: right;
+	list-style: none;
+}
+
+foot ul li {
+	float: left;
+	margin-left: 15px;
+
+
 }
