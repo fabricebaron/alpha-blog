@@ -5,7 +5,13 @@
 		<p>
 		 	<%= link_to "Créer nouvel article", new_article_path %>
 		</p>
+		<div align="center">
+			<%= will_paginate @articles %>
+		</div>
 		<%= render 'articles', obj: @articles %>
+		<div align="center">
+			<%= will_paginate @articles %>
+		</div>
 	</div>
 </div>
 
