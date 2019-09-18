@@ -16,18 +16,21 @@
       <ul class="nav navbar-nav">
         <li><%= link_to "Les sports", about_path, id: "logo1" %></li>
         <li><%= link_to "Musculation", articles_path , id: "logo2"%></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recuperation <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><li><%= link_to "Nouvel Article", new_article_path %></li></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
+        <li><%= link_to "Utilisateurs", users_path , id: "logo3"%></li>
+        <% if logged_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actions <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><li><%= link_to "Nouvel Article", new_article_path %></li></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        <% end %>
       </ul>
       <form class="navbar-form navbar-left">
         <div class="form-group">
@@ -39,10 +42,10 @@
         <% if logged_in? %>
           <li><%= link_to "Se déconnecter", logout_path, method: :delete %></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
+              <li><%= link_to "Afficher le profil", user_path(current_user) %></li>
+              <li><%= link_to "Editer mon profil", edit_user_path(current_user) %></li>          
               <li><a href="#">Something else here</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="#">Separated link</a></li>
