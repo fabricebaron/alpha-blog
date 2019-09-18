@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 	end
 
 	def require_user
-		if !logged_in
+		if !logged_in?
 			flash[:danger] = "Operation impossible si tu n'es pas connecté"
 			redirect_to root_path
 		end
